@@ -140,12 +140,73 @@
 // }
 // numGreaterThanY([1,2,3,4,6], 1)
 
-// CHALLENGE 9, 
+// CHALLENGE 9, Max, Min, Avg given an array print min, max and avg values.
 
-// CHALLENGE10,
+// function maxMinAvg(arr){
+//     if (arr.length == 0){
+//         console.log("Null arr, no min/max/avg");
+//         return;
+//     }
 
-// CHALLENGE 11,
+//     let min = arr[0];
+//     let max = arr[0];
+//     let sum = arr[0];
+//     for (let i = 1; i < arr.length; i++){
+//         if(arr[i] < min){
+//             min = arr[i];
+//         }
+//         if (arr[i] > max){
+//             max = arr[i];
+//         }
+//         sum += arr[i];
+//     }
+//     console.log("max:", max, " Min:", min);
+//     console.log("Avg value:", sum / arr.length);
+// }
+// maxMinAvg([1,2,3,4,5,6,7,9])
 
-// CHALLENGE 12, 
+// CHALLENGE10, Square the Values,write a function that replaces each value in the array with the product of the original value multiplied by itself. (e.g. [1,5,10,-2] will become [1,25,100,4])
 
-// CHALLENGE 13,
+// function squareVal(arr){
+//     for (let i = 0; i < arr.length; i++){
+//         arr[i] = arr[i] * arr[i];
+//     }
+//     return arr;
+// }
+// console.log(squareVal([1,2,3,4,5]))
+
+// CHALLENGE 11, Zero out Negative numbers. Write a function which sets the negative array value to zero.
+
+// function setNegativeToZero(arr){
+//     for (let i = 0; i < arr.length; i++){
+//         if(arr[i] < 0){
+//             arr[i] = 0;
+//         }
+//     }
+//     return arr;
+// }
+// console.log(setNegativeToZero([-1,3,5,-10]))
+
+
+// CHALLENGE 12, Swap String for Array Negative values, Write a function that takes an array of numbers and replaces any negative values within the array with the string 'Dojo'. For example if array = [-1,-3,2], your function will return ['Dojo','Dojo',2].
+
+// function numToStr(arr){
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i] < 0){
+//             arr[i] = "Dojo"
+//         }
+//     }
+//     return arr;
+// }
+// console.log(numToStr([-1,2,4]));
+
+// CHALLENGE 13, Shift array values 
+
+// function arrShift(arr){
+//     for (let i = 1; i < arr.length; i++){
+//         arr[i - 1] = arr[i];
+//     }
+//     arr[arr.length - 1] = 0;
+//     return arr;
+// }
+// console.log(arrShift([-1,2,3,0,4]))
